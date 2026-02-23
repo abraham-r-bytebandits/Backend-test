@@ -1,7 +1,7 @@
 import prisma from "../prisma/client";
 
 export const createAuditLog = async ({
-  accountId,
+  accountPublicId,
   action,
   entityType,
   entityId,
@@ -10,7 +10,7 @@ export const createAuditLog = async ({
   ipAddress,
   userAgent,
 }: {
-  accountId?: bigint;
+  accountPublicId?: string;
   action: string;
   entityType: string;
   entityId: string;
@@ -21,7 +21,7 @@ export const createAuditLog = async ({
 }) => {
   await prisma.auditLog.create({
     data: {
-      accountId,
+      accountPublicId,
       action,
       entityType,
       entityId,

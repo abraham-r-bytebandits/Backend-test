@@ -184,7 +184,7 @@ model CustomerProfile {
   firstName    String
   lastName     String
   phone        String?
-  profileImage String?   @db.LongText
+  profileImage String?
   dateOfBirth  DateTime?
   gender       String?
 

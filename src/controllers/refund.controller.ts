@@ -1,3 +1,7 @@
+import { Response } from "express";
+import { AuthRequest } from "../middlewares/auth.middleware";
+import prisma from "../prisma/client";
+
 export const requestRefund = async (req: AuthRequest, res: Response) => {
   try {
     const { orderItemId } = req.body;
