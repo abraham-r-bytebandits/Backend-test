@@ -1,5 +1,6 @@
 import prisma from "../src/prisma/client";
 
+
 async function main() {
   const roles = ["CUSTOMER", "ADMIN", "VENDOR"];
 

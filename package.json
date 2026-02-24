@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && prisma migrate deploy && prisma db seed",
     "postinstall": "npm run build",
     "start": "node dist/server.js",
     "prisma": "prisma",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "node dist/prisma/seed.js"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
@@ -27,7 +27,6 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    
     "@types/bcryptjs": "^2.4.6",
     "@types/nodemailer": "^6.4.7",
     "@types/cors": "^2.8.19",
