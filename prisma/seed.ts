@@ -15,6 +15,7 @@ async function main() {
     });
   }
   await prisma.product.createMany({
+    skipDuplicates: true,
     data: [
       {
         name: "Premium Wireless Headphones",
