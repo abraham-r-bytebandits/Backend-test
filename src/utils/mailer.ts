@@ -17,8 +17,8 @@ export const sendMail = async (
     const result = await brevo.transactionalEmails.sendTransacEmail({
       to: [{ email: to }],
       sender: {
-        email: process.env.EMAIL_FROM_ADDRESS ?? "kousik.bbtech@gmail.com",
-        name: process.env.EMAIL_FROM_NAME ?? "Auth Service",
+        email: process.env.EMAIL_FROM_ADDRESS ?? "abrahambill.clinton1@gmail.com",
+        name: process.env.EMAIL_FROM_NAME ?? "mailKey",
       },
       subject,
       htmlContent: html,
