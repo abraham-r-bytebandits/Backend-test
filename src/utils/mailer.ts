@@ -11,11 +11,17 @@ export const sendMail = async (
   subject: string,
   html: string
 ) => {
-  await resend.emails.send({
-    from: process.env.EMAIL_FROM ?? "Ecommerce App <onboarding@resend.dev>",
-    to,
-    subject,
-    html,
-  });
+  try {
+    const result = await resend.emails.send({
+      from: process.env.EMAIL_FROM ?? "Ecommerce App <onboarding@resend.dev>",
+      to,
+      subject,
+      html,
+    });
+    console.log("📧 Email sent successfully:", JSON.stringify(result));
+  } catch (error) {
+    console.error("❌ Failed to send email:", error);
+    throw error;
+  }
 };
 
