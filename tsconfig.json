@@ -11,6 +11,7 @@
     "src",
     "prisma"
   ],
+  "rootDir": ".",
   "exclude": [
     "node_modules"
   ]

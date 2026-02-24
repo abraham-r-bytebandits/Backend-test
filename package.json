@@ -1,11 +1,11 @@
 {
   "name": "ecommerce-backend",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
     "build": "tsc && prisma migrate deploy && prisma db seed",
     "postinstall": "npm run build",
-    "start": "node dist/server.js",
+    "start": "node dist/src/server.js",
     "prisma": "prisma",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
   },
