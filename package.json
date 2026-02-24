@@ -13,6 +13,7 @@
     "seed": "node dist/prisma/seed.js"
   },
   "dependencies": {
+    "@getbrevo/brevo": "^4.0.1",
     "@prisma/client": "^5.22.0",
     "axios": "^1.13.5",
     "bcryptjs": "^3.0.3",
